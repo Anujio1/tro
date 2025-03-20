@@ -12,9 +12,9 @@ const {
 const app = express();
 const crypto = require("crypto");
 const time = () => Math.floor(Date.now() / 1000);
-const TELEGRAM_TOKEN = "7737430767:AAEgE_xK5KrXgFvzg-N6mm48kgzWhZexfHo";
+const TELEGRAM_TOKEN = "8070406008:AAFIOMkXRqXV9DgcheDE2M2sAqfusmU2idc";
 const VERIFY_EXPIRE = 43200;
-const CHANNEL_ID = "teraboxai";
+const CHANNEL_ID = "teraboxio";
 const TELEGRAM_API_URL = `https://api.telegram.org/bot${TELEGRAM_TOKEN}`;
 const IS_VERIFY = true;
 app.use(express.json());
@@ -225,8 +225,8 @@ async function handleUpdate(update) {
           "💬 <b>Send your TeraBox link to start your free download!</b>";
         const replyMarkup = {
           inline_keyboard: [
-            [{ text: "Join ❤️🚀", url: "https://t.me/teraboxai" }],
-            [{ text: "Developer ⚡️", url: "https://t.me/teraboxai" }],
+            [{ text: "Join ❤️🚀", url: "https://t.me/teraboxio" }],
+            [{ text: "Developer ⚡️", url: "https://t.me/teraboxio" }],
           ],
         };
         await sendMessage(chatId, replyMessage, replyMarkup, "HTML");
@@ -323,14 +323,14 @@ async function handleUpdate(update) {
       }
     } else if (
       text === "/stats" &&
-      ["6334683599", "5958047299"].includes(userId)
+      ["7167145056", "5958047299"].includes(userId)
     ) {
       const result = await getVerificationStatistics();
       await sendMessage(chatId, result, null, (parse_mode = "HTML"));
       return;
     } else if (
       text === "/broad" &&
-      ["6334683599", "5958047299"].includes(userId)
+      ["7167145056", "5958047299"].includes(userId)
     ) {
       if (update.message && update.message.reply_to_message) {
         broadcast(update.message.reply_to_message.text, userId); // Fire the broadcast request
@@ -342,7 +342,7 @@ async function handleUpdate(update) {
     } else if (
       text &&
       text.startsWith("/add") &&
-      ["6334683599", "5958047299"].includes(userId)
+      ["7167145056", "5958047299"].includes(userId)
     ) {
       const match = text.match(/^\/add (\d+)$/);
       let id;
@@ -405,7 +405,7 @@ async function handleUpdate(update) {
     }   else if (
       text &&
       text.startsWith("/rm") &&
-      ["6334683599", "5958047299"].includes(userId)
+      ["7167145056", "5958047299"].includes(userId)
     ) {
       const match = text.match(/^\/rm (\d+)$/);
       let id;
