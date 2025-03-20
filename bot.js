@@ -12,7 +12,7 @@ const {
 const app = express();
 const crypto = require("crypto");
 const time = () => Math.floor(Date.now() / 1000);
-const TELEGRAM_TOKEN = "87737411241:AAEmBxOM2n7sXWOmid5u3CHqxD0EHvSkw9E";
+const TELEGRAM_TOKEN = "8070406008:AAFIOMkXRqXV9DgcheDE2M2sAqfusmU2idc";
 const VERIFY_EXPIRE = 43200;
 const CHANNEL_ID = "teraboxio";
 const TELEGRAM_API_URL = `https://api.telegram.org/bot${TELEGRAM_TOKEN}`;
